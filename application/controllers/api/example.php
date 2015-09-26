@@ -31,6 +31,12 @@ class Example extends REST_Controller
         $this->methods['user_delete']['limit'] = 50; //50 requests per hour per user/key
     }
     
+
+    function test_get(){
+        $ret = array('code' => 200, 'message' => 'dapet sih');
+        $this->response($ret,200);
+    }
+
     function user_get()
     {
         if(!$this->get('id'))
